@@ -1,0 +1,682 @@
+{
+	"info": {
+		"_postman_id": "8822cddf-ed3d-4a17-a0d9-d924a47b93ec",
+		"name": "ALGAFOOD_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cozinhas",
+			"item": [
+				{
+					"name": "cadastrar cozinha json",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"nome\": \"Japonesa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.algafood.local:8082/cozinhas",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"cozinhas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar nome da cozinha por id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"nome\": \"Brazileira\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.algafood.local:8082/cozinhas/3",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"cozinhas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastrar cozinha xml",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<cozinha>\n    <nome>Japonesa</nome>\n</cozinha>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.algafood.local:8082/cozinhas",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"cozinhas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toas as cozinhas em xml",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api.algafood.local:8082/cozinhas",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"cozinhas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remover cozinha por id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api.algafood.local:8082/cozinhas/3",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"cozinhas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "todas as cozinhas em json",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api.algafood.local:8082/cozinhas",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"cozinhas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uma cozinha por id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api.algafood.local:8082/cozinhas/1",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"cozinhas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "estados",
+			"item": [
+				{
+					"name": "atualizar nome do estado por id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"nome\": \"estado\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.algafood.local:8082/estados/4",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"estados",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastrar estado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {        \n        \"nome\": \"Bahia\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.algafood.local:8082/estados",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"estados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "estado por id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api.algafood.local:8082/estados/1",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"estados",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remover estado por id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api.algafood.local:8082/estados/4",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"estados",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "todos os estados",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api.algafood.local:8082/estados",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"estados"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "restaurantes",
+			"item": [
+				{
+					"name": "http://api.algafood.local:8082/restaurantes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {        \n        \"nome\": \"Thai Gourmet2\",\n        \"taxaFrete\": 10.00,\n        \"cozinha\": {\n            \"id\": 1,\n            \"nome\": \"Tailandesa\"\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://api.algafood.local:8082/restaurantes",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"restaurantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "todos os restaurantes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api.algafood.local:8082/restaurantes",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"restaurantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurante por id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://api.algafood.local:8082/restaurantes/1",
+							"protocol": "http",
+							"host": [
+								"api",
+								"algafood",
+								"local"
+							],
+							"port": "8082",
+							"path": [
+								"restaurantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API_Token",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/api/enriquecimento/restaurante/token?user=rfranca&password=123456&client=nomeDoRestaurante",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"enriquecimento",
+								"restaurante",
+								"token"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "rfranca"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								},
+								{
+									"key": "client",
+									"value": "nomeDoRestaurante"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Restaurante",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/api/enriquecimento/restaurante/id?id=1&token=tokenXYZ",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"enriquecimento",
+								"restaurante",
+								"id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "token",
+									"value": "tokenXYZ"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MS-Enriquecimento de restaurante",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/api/enriquecimento/id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"enriquecimento",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

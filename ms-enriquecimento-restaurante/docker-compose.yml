@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  dbrestaurante:
+    platform: linux/x86_64
+    image: mysql
+    container_name: mysql-dbrestaurante
+    command: '--default-authentication-plugin=mysql_native_password'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: dbrestaurante
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - '3306:3306'
+    networks:
+      - development-network
+
+networks:
+  development-network:
+    driver: bridge

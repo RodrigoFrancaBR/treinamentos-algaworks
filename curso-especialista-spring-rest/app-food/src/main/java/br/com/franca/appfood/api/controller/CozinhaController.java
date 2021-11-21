@@ -1,5 +1,6 @@
 package br.com.franca.appfood.api.controller;
 
+import br.com.franca.appfood.domain.dtos.CozinhasXmlWrapper;
 import br.com.franca.appfood.domain.exception.EntidadeEmUsoException;
 import br.com.franca.appfood.domain.exception.EntidadeNaoEncontradaException;
 import br.com.franca.appfood.domain.model.Cozinha;
@@ -30,10 +31,18 @@ public class CozinhaController {
 		return cozinhaRepository.listar();
 	}
 
+//	@GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
+//	public List<Cozinha> listarXML() {
+//		System.out.println("produzindo MediaType.APPLICATION_XML_VALUE");
+//		return cozinhaRepository.listar();
+//	}
+
 	@GetMapping(produces = MediaType.APPLICATION_XML_VALUE)
-	public List<Cozinha> listarXML() {
-		System.out.println("produzindo MediaType.APPLICATION_XML_VALUE");
-		return cozinhaRepository.listar();
+	public CozinhasXmlWrapper listarCozinhasXmlWrapper() {
+		System.out.println("produzindo CozinhasXmlWrapper");
+		List<Cozinha> cozinhas = cozinhaRepository.listar();
+		CozinhasXmlWrapper cozinhasXmlWrapper = new CozinhasXmlWrapper(cozinhas);
+		return cozinhasXmlWrapper;
 	}
 
 	@GetMapping("/id/{id}")
