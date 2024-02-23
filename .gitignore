@@ -248,3 +248,59 @@ modules.xml
 hs_err_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,intellij+all,intellij+iml,java
+
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/ß
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+./Users/rodrigocosta/Documents/GitHub/tutoriais/myAppMongoDB/data/**
+.DS_Store
+*.wt
+*.2021-12-22
+*.2021-12-22T23-43-03Z-00000
+*.2021-12-23T00-19-41Z-00000
+*.interim
+*.2021-12-22T23-42-56Z-00000
+*.2021-12-23T00-21-54Z-00000
+*.2021-12-23T00-24-09Z-00000
+*.turtle
+*.2021-12-23T00-38-34Z-00000
+.DS_Store
+*.0000000006
+*.bson
+*.lock
+*.0000000002
+*.0000000001
+myAppMongoDB/data/WiredTiger
+/foodanalytics/node_modules/
+*.DS_Store
+node_modules

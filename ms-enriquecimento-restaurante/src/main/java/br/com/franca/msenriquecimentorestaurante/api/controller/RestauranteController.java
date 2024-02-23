@@ -2,6 +2,7 @@ package br.com.franca.msenriquecimentorestaurante.api.controller;
 
 import br.com.franca.msenriquecimentorestaurante.domain.model.Restaurante;
 import br.com.franca.msenriquecimentorestaurante.domain.service.RestauranteService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,5 @@ public class RestauranteController {
     @GetMapping(path = "/id/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Restaurante obterRestauranteEnriquecido(@PathVariable Long id){
         return service.obterRestauranteEnriquecido(id);
-
     }
 }
